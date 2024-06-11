@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BeneficiaryHandler implements Command.Handler<AddBeneficiariesCommand, List<Beneficiary>> {
+public class BeneficiaryHandler implements Command.Handler<AddBeneficiariesCommand, List<TransactionInstance>> {
   @Override
-  public List<Beneficiary> handle(AddBeneficiariesCommand command) {
+  public List<TransactionInstance> handle(AddBeneficiariesCommand command) {
     command.beneficiaries.forEach((benef) -> System.out.println("NEW TRANSACTION"));
     return null;
   }
